@@ -9,7 +9,35 @@
 yourrecipe 
 </title>
     </head>
-
+<body>
+  
+  <script>
+   /*-----
+Spanizer
+- Wraps letters with spans, for css animations
+-----*/
+(function($) {
+  var s,
+  spanizeLetters = {
+    settings: {
+      letters: $('.js-spanize'),
+    },
+    init: function() {
+      s = this.settings;
+      this.bindEvents();
+    },
+    bindEvents: function(){
+      s.letters.html(function (i, el) {
+        //spanizeLetters.joinChars();
+        var spanizer = $.trim(el).split("");
+        return '<span>' + spanizer.join('</span><span>') + '</span>';
+      });
+    },
+  };
+  spanizeLetters.init();
+})(jQuery);
+</script>
+  
 <main>
   <section class="mast">
     <figure class="mast__bg" style="background-image:url(https://unsplash.it/1800/800?image=893)"></figure>
@@ -25,6 +53,6 @@ And I'll tell you how I became the prince of Bel Air.</p>
     </header>
   </section>
 </main>
-  
+  </body>
 </html>
 
