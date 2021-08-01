@@ -3,7 +3,9 @@
 <link href="style.css" rel="stylesheet">
   <head>
 <meta charset="utf-8">
-    <!--<script src="main.js"></script>-->
+    alert ('Подключён, начинаю работу!')
+
+    <script src="main.js"></script>
     
     <title>
 yourrecipe 
@@ -11,28 +13,7 @@ yourrecipe
     </head>
 <body>
   
-  <script>
-(function($) {
-  var s,
-  spanizeLetters = {
-    settings: {
-      letters: $('.js-spanize'),
-    },
-    init: function() {
-      s = this.settings;
-      this.bindEvents();
-    },
-    bindEvents: function(){
-      s.letters.html(function (i, el) {
-        //spanizeLetters.joinChars();
-        var spanizer = $.trim(el).split("");
-        return '<span>' + spanizer.join('</span><span>') + '</span>';
-      });
-    },
-  };
-  spanizeLetters.init();
-})(jQuery);
-</script>
+  
   
 <main>
   <section class="mast">
